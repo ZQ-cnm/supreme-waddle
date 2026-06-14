@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>实时时间</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif;}
+body{
+background: linear-gradient(135deg, #0099F7 0%, #2F80ED 100%);
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+color:white;
+}
+.card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+padding:60px 80px;
+border-radius:30px;
+box-shadow:0 10px 40px rgba(0,0,0,0.15);
+text-align:center;
+}
+h2{
+font-size:32px;
+margin-bottom:30px;
+}
+#time{
+font-size:46px;
+font-weight:bold;
+margin-bottom:40px;
+text-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.back{
+padding:14px 36px;
+font-size:18px;
+background:rgba(255,255,255,0.2);
+color:white;
+border:2px solid rgba(255,255,255,0.4);
+border-radius:16px;
+cursor:pointer;
+transition:0.3s;
+}
+.back:hover{
+background:rgba(255,255,255,0.3);
+transform:scale(1.05);
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>当前实时时间</h2>
+<div id="time"></div>
+<button class="back" onclick="history.back()">返回首页</button>
+</div>
+
+<script>
+function showTime(){
+let d = new Date();
+document.getElementById("time").innerText = d.toLocaleString();
+}
+setInterval(showTime,1000);
+showTime();
+</script>
+</body>
+</html>
