@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>多功能小工具</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif;}
+body{
+background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+color:white;
+}
+h1{
+font-size:42px;
+margin-bottom:50px;
+text-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.btn-box{
+display:flex;
+flex-direction:column;
+gap:24px;
+}
+.btn{
+width:320px;
+height:80px;
+font-size:24px;
+border:none;
+border-radius:20px;
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(10px);
+color:white;
+box-shadow:0 8px 32px rgba(0,0,0,0.1);
+cursor:pointer;
+transition:0.3s;
+}
+.btn:hover{
+transform:translateY(-5px);
+background:rgba(255,255,255,0.3);
+box-shadow:0 12px 40px rgba(0,0,0,0.15);
+}
+.btn1{border:2px solid rgba(255,255,255,0.4);}
+.btn2{border:2px solid rgba(255,255,255,0.4);}
+.btn3{border:2px solid rgba(255,255,255,0.4);}
+</style>
+</head>
+<body>
+<h1>多功能小工具网站</h1>
+<div class="btn-box">
+<button class="btn btn1" onclick="location.href='time.html'">🕒 查看时间</button>
+<button class="btn btn2" onclick="location.href='calc.html'">🧮 计算工具</button>
+<button class="btn btn3" onclick="location.href='answer.html'">🔮 寻求答案</button>
+</div>
+</body>
+</html>
